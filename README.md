@@ -3,7 +3,7 @@
 Y86 Instruction Disassembler
 The Y86 Instruction Disassembler is a C program designed to disassemble Y86 machine bytecode, enabling the user to comprehend the instructions written in human-readable mnemonics. The disassembler works by processing a Y86 binary program file and subsequently printing the opcode mnemonics, along with associated registers and immediate values, to the console.
 
-Features:
+**Features:**
 Array of Register Mnemonics: The program contains an array of Y86 register names for easy translation.
 
 Opcode Translation: The byte0 function is leveraged to convert opcodes to their mnemonic representations.
@@ -14,22 +14,15 @@ Little Endian Decoding: The program implements decoding instructions in little e
 
 Conditional Instruction Execution: Depending on the opcode found, the disassembler appropriately decodes the subsequent bytes and prints the full Y86 instruction to the console.
 
-Usage:
+**Usage:**
 Compile the C program.
 Run the executable followed by the path to the Y86 binary program file.
 bash
 Copy code
 ./disassembler path/to/y86/binaryfile.bin
-External Functions:
+**External Functions:**
 loadBinFromFile: This utility function is provided to read a Y86 binary program from a file into the designated memory array. The function determines the program size, ensuring it doesn't surpass the available memory size, and returns the total bytes read from the file.
 Note:
 The main focus of this project is on disassembling the Y86 instructions. The provided loadBinFromFile function aids in reading the binary from a file, and users are not required to modify it.
 
-Potential Improvements:
-Error Handling: Enhanced error and exception handling for unknown opcodes or corrupted binary files.
 
-Support for More Instructions: As Y86 instruction set architectures evolve, adding support for newer or less common instructions will be beneficial.
-
-Interactive UI: An interactive user interface could be developed to visualize the instructions more vividly.
-
-This README provides an understanding of the project, its features, usage steps, and potential future improvements.
